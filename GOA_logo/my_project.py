@@ -411,7 +411,7 @@ begin_fill()
 right(90)
 forward(230)
 right(90)
-forward(60) #
+forward(60)
 right(90)
 forward(230)
 right(90)
@@ -508,7 +508,6 @@ forward(100)
 left(90)
 forward(50)
 
-
 left(90)
 forward(100)
 
@@ -535,8 +534,6 @@ pendown()
 penup()
 goto(0, 0)
 pendown()
-
-
 
 penup()
 goto(10, 0)
@@ -771,21 +768,9 @@ right(90)
 forward(10)
 end_fill()
 
-# penup()
-# goto(0, 0)
-# pendown()
-
-####################################################################################
-
 penup()
 goto(350, 220)
 pendown()
-
-
-
-
-
-
 
 color("grey")
 
@@ -807,7 +792,7 @@ forward(35)
 left(60)
 forward(35)
 left(50)
-forward(15) # weli
+forward(15)
 left(60)
 forward(20)
 left(50)
@@ -979,7 +964,6 @@ penup()
 goto(350, 220)
 pendown()
 
-
 color("grey")
 right(165)
 forward(50)
@@ -1075,10 +1059,6 @@ right(110)
 forward(32)
 end_fill()
 
-# penup()
-# goto(79, 137)
-# pendown()
-
 penup()
 goto(409, 357)
 pendown()
@@ -1118,11 +1098,5 @@ forward(27)
 left(90)
 forward(18)
 end_fill()
-
-
-
-
-
-
 
 exitonclick()
