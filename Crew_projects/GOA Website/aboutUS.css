@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ----- header ----- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+body{
+    background-color: #000;
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #076921;
+    padding: 10px 20px;
+}
+.navbar{
+    color: #000;
+}
+.navbar .nav-links{
+    display: flex;
+    gap: 50px;
+}
+.navbar .nav-links a{
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.navbar .sign-in{
+    background-color: #000;
+    color: #076921;
+    border: 2px soilid green;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    border-color: #000;
+}
+.navbar .sign-in:hover{
+    background-color: #076921;
+    color: #000;
+    border: solid;
+}
+.nav-links a:hover{
+    text-decoration: underline;
+}
+
+/* ----- main ----- */
+
+.my-h3{
+    color: #076921;
+    font-size: 25px;
+    padding: 200px 300px 200px 300px;
+}
+
+/* ----- footer ----- */
+
+footer{
+    background-color: #076921;
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #000;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: #076921;
+    opacity: 0.9;
+}
+.socialIcons a:hover{
+    background-color:#076921;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: #000;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+}
+.footerNav ul li a{
+    color: #000;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s
+}
+.footerNav ul li a:hover{
+    opacity: 1
+}
+.footerBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color: white;
+}
+.footerNav ul li{
+    color: #076921;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
