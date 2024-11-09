@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Outfit;
+}
+body{
+    background-color: hsl(212, 45%, 89%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 15px;
+    border-radius: 20px;
+}
+img{
+    width: 300px;
+    border-radius: 12px;
+}
+#p-1{
+    color: hsl(218, 44%, 22%);
+    font-size: 20px;
+    font-weight: 700;
+    width: 229px;
+    text-align: center;
+}
+#p-2{
+    color: hsl(216, 15%, 48%);
+    font-size: 15px;
+    font-weight: 400;
+    width: 243px;
+    text-align: center;
+}
