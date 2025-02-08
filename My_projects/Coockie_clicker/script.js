@@ -133,13 +133,13 @@ doubleCoockies.addEventListener('click', () => {
 
 // Auto Clickers Functions
 function threeMinutes(coockieAdded, goldAdded){
-    goldP.textContent = `Gold: ${gold -= minutes3Price}`;
+    goldP.textContent = `Gold: ${gold -= minutes3Price} +${goldAdded}`;
     minutes3B.textContent = `${minutes3Price *= 2}$`;
     const coockieAndGold = setInterval(() => {
         coockies += coockieAdded;
         gold += goldAdded;
-        coockieP.textContent = `Coockies: ${coockies}`;
-        goldP.textContent = `Gold: ${gold}`;
+        coockieP.textContent = `Coockies: ${coockies} +${coockieAdded}`;
+        goldP.textContent = `Gold: ${gold} +${goldAdded}`;
         checkPrices();
     }, 1000);
     setTimeout(() => {
@@ -148,13 +148,13 @@ function threeMinutes(coockieAdded, goldAdded){
 };
 
 function fiveMinutes(coockieAdded, goldAdded){
-    goldP.textContent = `Gold: ${gold -= minutes5Price}`;
+    goldP.textContent = `Gold: ${gold -= minutes5Price} +${goldAdded}`;
     minutes5B.textContent = `${minutes5Price *= 2}$`;
     const coockieAndGold = setInterval(() => {
         coockies += coockieAdded;
         gold += goldAdded;
-        coockieP.textContent = `Coockies: ${coockies}`;
-        goldP.textContent = `Gold: ${gold}`;
+        coockieP.textContent = `Coockies: ${coockies} +${coockieAdded}`;
+        goldP.textContent = `Gold: ${gold} +${goldAdded}`;
         checkPrices();
     }, 1000);
     setTimeout(() => {
@@ -163,13 +163,13 @@ function fiveMinutes(coockieAdded, goldAdded){
 };
 
 function tenMinutes(coockieAdded, goldAdded){
-    goldP.textContent = `Gold: ${gold -= minutes10Price}`;
+    goldP.textContent = `Gold: ${gold -= minutes10Price} +${goldAdded}`;
     minutes10B.textContent = `${minutes10Price *= 2}$`;
     const coockieAndGold = setInterval(() => {
         coockies += coockieAdded;
         gold += goldAdded;
-        coockieP.textContent = `Coockies: ${coockies}`;
-        goldP.textContent = `Gold: ${gold}`;
+        coockieP.textContent = `Coockies: ${coockies} +${coockieAdded}`;
+        goldP.textContent = `Gold: ${gold} +${goldAdded}`;
         checkPrices();
     }, 1000);
     setTimeout(() => {
