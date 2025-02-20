@@ -65,5 +65,3 @@ function createSquare(){
 };
 
 setInterval(createSquare, 100);
-
-// localStorage.clear();
