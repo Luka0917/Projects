@@ -1,31 +1,3 @@
-const colors = [
-    '#ffffff',
-    '#68ba74'
-];
-
-function createSquare(){
-    const body = document.querySelector('body');
-    const square = document.createElement('span');
-    let size = Math.random() * 50;
-
-    square.style.width = 20 + size + 'px';
-    square.style.height = 20 + size + 'px';
-    
-    square.style.top = Math.random() * innerHeight + 'px';
-    square.style.left = Math.random() * innerWidth + 'px';
-
-    const bg = colors[Math.floor(Math.random() * colors.length)];
-    square.style.background = bg;
-
-    body.appendChild(square);
-
-    setTimeout(() => {
-        square.remove()
-    }, 5000);
-};
-
-setInterval(createSquare, 100);
-
 console.log(window.innerWidth);
 console.log(window.innerHeight);
 
@@ -65,5 +37,42 @@ document.querySelector('form').addEventListener('submit', e => {
         alert('Invalid Password!');
     };
 });
+
+function loginClicked(){
+    document.getElementById('form-div').innerHTML = `
+        <p id="login">Login</p>
+        <form>
+            <label for="user-name" id="user-label">User name</label>
+            <input type="text" id="user-name" required>
+    
+            <label for="password" id="password-label">Password</label>
+            <input type="text" id="password" required>
+    
+            <button id="register">Register</button>
+        </form>
+        <p id="register-p">Don't Have An Account? <b id="acc-reg-b">Register</b></p>
+    `;
+    document.getElementById('acc-reg-b').addEventListener('click', () => {
+        document.getElementById('form-div').innerHTML = `
+            <p id="reg">Register</p>
+                <form>
+                    <label for="user-name" id="user-label">User name</label>
+                    <input type="text" id="user-name" required>
+    
+                    <label for="email" id="email-label">Email</label>
+                    <input type="email" id="email" required>
+    
+                    <label for="password" id="password-label">Password</label>
+                    <input type="text" id="password" required>
+    
+                    <button id="register">Register</button>
+                </form>
+            <p id="login-p">Already Have An Account? <b id="acc-b">Login</b></p>
+        `;
+        document.getElementById('acc-b').addEventListener('click', () => {loginClicked()});
+    });
+};
+document.getElementById('acc-b').addEventListener('click', () => {loginClicked()});
+document.getElementById('login-div').addEventListener('click', () => {loginClicked()});
 
 // localStorage.clear()
