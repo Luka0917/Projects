@@ -13,25 +13,7 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 7px 10px;
-}
-nav{
-    background-color: #68ba74;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    padding: 10px 15px;
-    border-radius: 12px;
-}
-.nav-a{
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    color: #212522;
-}
-.nav-a:hover{
-    text-decoration: underline;
+    padding: 10px 7px;
 }
 #user{
     display: flex;
@@ -52,14 +34,27 @@ nav{
     font-size: 20px;
     transition: background-color 0.2s;
 }
-#profile:hover{
-    background-color: #212522;
-    color: #68ba74;
-    cursor: pointer;
-}
 #name{
     color: #fff;
     font-size: 20px;
+}
+nav{
+    background-color: #68ba74;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 10px 15px;
+    border-radius: 12px;
+}
+.nav-a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #212522;
+}
+.nav-a:hover{
+    text-decoration: underline;
 }
 #login-div{
     background-color: #68ba74;
@@ -85,14 +80,14 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 200vh;
+    gap: 250px;
 }
 #welcome{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 300px;
-    border: 1px solid purple;
+    width: 100%;
+    padding: 200px 0 0;
 }
 #main-b{
     color: #fff;
@@ -106,11 +101,11 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 25px;
     background-color: #181818;
-    padding: 25px 40px 50px;
     color: #fff;
     border-radius: 30px;
+    padding: 30px 20px;
+    gap: 20px;
 }
 #reg, #login{
     font-size: 30px;
@@ -131,8 +126,7 @@ input{
     padding: 3px 15px;
     border-radius: 5px;
     border: 1px solid #fff;
-}
-#register{
+}#register{
     background-color: #68ba74;
     padding: 5px 10px;
     border: 2px solid #68ba74;
@@ -159,29 +153,81 @@ input{
     text-decoration: underline;
     cursor: pointer;
 }
-#err{
-    color: red;
+#err{color: red;}
+
+#about-us, #martial-art{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 75px;
 }
-#about-us{
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 30px;
+}
+#mentors{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid red;
-    width: 1750px;
+    text-align: left;
     gap: 30px;
-    margin-top: 200px;
+    padding: 0 75px;
 }
-#about-us-b{
+#about-us-b, #mentors-b, #martial-art-b, #social-media-b{
     font-size: 40px;
     color: #68ba74;
 }
-#about-us-p{
+#about-us-p, #mentors-p, #martial-art-p{
     font-size: 25px;
     color: #fff;
     line-height: 35px;
 }
 .goa-b{
     color: #68ba74;
+}
+#logo-p{
+    font-size: 40px;
+    color: #68ba74;
+}
+img{
+    height: 220px;
+    border-radius: 30px;
+}
+#social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 0 100px 0;
+    width: 100%;
+    border-top: 2px solid #3f4147;
+}
+
+/* Footer */
+#social-media-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.social-media-a{
+    font-size: 30px;
+}
+#youtube{
+    color: #ff0033;
+}
+#facebook{
+    color: #1877f2;
+}
+#instagram{
+    color: #fa0175;
+}
+#tiktok{
+    color: #000000;
 }
 
 /* @media screen and (max-width: 1483px){
@@ -192,9 +238,3 @@ input{
         font-size: 80px;
     }
 } */
-
-.luka{
-    width: 200px;
-    height: 200px;
-    background: turquoise;
-}
