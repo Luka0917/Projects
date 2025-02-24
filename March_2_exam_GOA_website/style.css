@@ -230,11 +230,107 @@ img{
     color: #000000;
 }
 
-/* @media screen and (max-width: 1483px){
-    body{
+@media screen and (max-width: 1483px){
+    /* body{
         background-color: red;
-    }
+    } */
     #main-b{
         font-size: 80px;
     }
-} */
+    #about-us, #martial-art{
+        gap: 50px;
+    }
+}
+@media screen and (max-width: 924px){
+    #main-b{
+        font-size: 60px;
+    }
+}
+@media screen and (max-width: 762px){
+    #main-b{
+        font-size: 50px;
+    }
+    #form-div{
+        padding: 20px 10px;
+        gap: 10px;
+    }
+    #reg, #login{
+        font-size: 27px;
+    }
+    label{
+        font-size: 17px;
+    }
+    .text{
+        gap: 30px;
+    }
+    #mentors{
+        gap: 30px;
+        padding: 0 75px;
+    }
+    #about-us-b, #mentors-b, #martial-art-b, #social-media-b{
+        font-size: 30px;
+    }
+    #about-us-p, #mentors-p, #martial-art-p{
+        font-size: 20px;
+        line-height: 35px;
+    }
+    #logo-p{
+        font-size: 40px;
+    }
+    img{
+        height: 200px;
+    }
+}
+@media screen and (max-width: 664px){
+    #welcome{
+        flex-direction: column;
+        gap: 50px;
+    }
+    #about-us, #martial-art{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 450px){
+    #user{
+        gap: 5px;
+    }
+    #profile{
+        width: 30px;
+        height: 30px;
+    }
+    #name{
+        font-size: 18px;
+    }
+    nav{
+        gap: 20px;
+        padding: 10px 15px;
+        border-radius: 12px;
+    }
+    .nav-a{
+        font-size: 15px;
+    }
+    #login-div{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 404px){
+    #main-b{
+        font-size: 45px;
+    }
+}
+@media screen and (max-width: 361px){
+    #main-b{
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 345px){
+    .nav-a{
+        font-size: 12px;
+    }
+    #login-div{
+        font-size: 12px;
+    }
+    #social-media-b{
+        font-size: 25px;
+    }
+}
