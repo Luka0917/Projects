@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgb(20, 20, 20) 5%, rgb(200, 200, 200), rgb(20, 20, 20) 95%);
+}
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+#main-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #8f8f8f;
+    border: 2px solid #000;
+    border-radius: 30px;
+    padding: 60px 120px;
+    gap: 30px;
+    color: #fff;
+    font-size: 20px;
+}
+input, #guess{
+    border: 2px solid #000;
+    border-radius: 7px;
+    padding: 6px 12px;;
+}
+#guess:hover{
+    cursor: pointer;
+}
+.choice{
+    padding: 7px 14px;
+    border: 2px solid #000;
+    border-radius: 7px;
+    color: #fff;
+    background-color: #000;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+.choice:hover{
+    background: transparent;
+    color: #000;
+    cursor: pointer;
+}
+#correct{color: green;}
+#wrong{color: red;}
