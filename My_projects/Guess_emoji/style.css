@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.divs{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid lightcoral;
+    background: pink;
+    border-radius: 20px;
+    font-size: 50px;
+    transform: rotateY(180deg);
+}
+.divs:hover{
+    cursor: pointer;
+}
+p{
+    visibility: hidden;
+}
+#main{
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 5px;
+}
