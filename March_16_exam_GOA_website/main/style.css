@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+#main-b{
+    color: #fff;
+    font-size: 100px;
+}
+#o{
+    color: #68ba74;
+}
+#form-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #181818;
+    color: #fff;
+    border-radius: 30px;
+    padding: 30px 20px;
+    gap: 20px
+}
+#reg, #login{
+    font-size: 30px;
+    font-weight: 600;
+}
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#user-label, #email-label, #password-label, button{
+    margin-top: 20px;
+}
+label{
+    font-size: 18px;
+}
+input{
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+#register{
+    background-color: #68ba74;
+    padding: 5px 10px;
+    border: 2px solid #68ba74;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+#register:hover{
+    background-color: #212522;
+    color: #fff;
+    cursor: pointer;
+}
+#login-p{
+    font-size: 17px;
+    margin-top: 20px;
+}
+#acc-b, #acc-reg-b{
+    text-decoration: none;
+    margin-left: 3px;
+    font-weight: 600;
+    color: #68ba74;
+}
+#acc-b:hover, #acc-reg-b:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+#err{
+    color: red;
+}
