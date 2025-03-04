@@ -69,6 +69,12 @@ nav{
     color: #fff;
     cursor: pointer;
 }
+#login-div-a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #212522;
+}
 span{
     position: absolute;
     pointer-events: none;
