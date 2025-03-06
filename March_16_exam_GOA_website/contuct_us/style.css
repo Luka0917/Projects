@@ -1,0 +1,129 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 50px;
+}
+#main-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #181818;
+    padding: 40px 80px;
+    border-radius: 24px;
+}
+#contuct-us-b{
+    font-size: 40px;
+    color: #68ba74;
+}
+#main-div-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 500px;
+}
+#social-media-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+#social-media-b, #send-message-b{
+    font-size: 30px;
+    color: #68ba74;
+}
+#social-media-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.social-media-a{
+    font-size: 30px;
+}
+#youtube{
+    color: #ff0033;
+}
+#facebook{
+    color: #1877f2;
+}
+#instagram{
+    color: #fa0175;
+}
+#tiktok{
+    color: #ffffff;
+}
+#send-message-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+label{
+    color: #fff;
+    font-size: 18px;
+}
+#email-label, #message-label, #send-message-button{
+    margin-top: 20px;
+}
+input{
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+#send-message-button{
+    background-color: #68ba74;
+    padding: 5px 10px;
+    border: 2px solid #68ba74;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+#send-message-button:hover{
+    background-color: #212522;
+    color: #fff;
+    cursor: pointer;
+}
+/* main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 50px;
+}
+#text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #181818;
+}
+#contuct-us{
+    font-size: 40px;
+    color: #68ba74;
+}
+#social-media-b{
+    font-size: 30px;
+    color: #68ba74;
+}
+#social-media-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
