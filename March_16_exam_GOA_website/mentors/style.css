@@ -4,6 +4,7 @@ main{
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    padding: 50px;
 }
 #text{
     display: flex;
