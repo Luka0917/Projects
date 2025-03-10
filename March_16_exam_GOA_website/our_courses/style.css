@@ -1,0 +1,113 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    /* padding: 50px; */
+}
+#main-main{
+    background-color: #181818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 24px;
+}
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    /* border: 1px solid red; */
+}
+#register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+#register-b{
+    font-size: 30px;
+    color: #68ba74;
+    /* border: 1px solid red; */
+}
+label{
+    font-size: 18px;
+}
+input{
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+form button{
+    background-color: #68ba74;
+    padding: 5px 10px;
+    border: 2px solid #68ba74;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+form button:hover{
+    background-color: #212522;
+    color: #fff;
+    cursor: pointer;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+form button{
+    margin-top: 30px;
+}
+.radio-divs{
+    margin-top: 20px;
+}
+.radio-divs input:hover{
+    cursor: pointer;
+}
+#courses-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+#nav-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background-color: #68ba74;
+    padding: 20px;
+    border-radius: 12px;
+}
+.courses-p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.courses-p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+#course-div-text{
+    /* border: 1px solid red; */
+    width: 525px;
+    height: 320px;
+    background-color: #68ba74;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+    border-radius: 12px;
+    z-index: -1;
+}
+#course-div-text-b{
+    font-size: 30px;
+}
+#course-div-text-p{
+    font-size: 20px;
+}

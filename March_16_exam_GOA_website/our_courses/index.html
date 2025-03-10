@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOA-Our Course</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/March_16_exam_GOA_website/bg_animation_&_header/animation.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="user"></div>
+        <nav>
+            <a href="/March_16_exam_GOA_website/about_us/index.html" class="nav-a">About Us</a>
+            <a href="/March_16_exam_GOA_website/mentors/index.html" class="nav-a">Mentors</a>
+            <a href="/March_16_exam_GOA_website/contuct_us/index.html" class="nav-a">Contuct US</a>
+            <a href="/March_16_exam_GOA_website/main/index.html" class="nav-a">Home</a>
+        </nav>
+        <div id="login-div">Login</div>
+    </header>
+    <main>
+        <div id="main-main">
+            <div id="main">
+                <div id="register">
+                    <b id="register-b">Register To Our Courses</b>
+                    <form>
+                        <label for="times-week" id="times-week-label">How Many Times A Week</label>
+                        <input type="number" id="times-week" placeholder="1-4" min="1" max="4" required>
+                        
+                        <div class="radio-divs">
+                            <input type="radio" id="full-stack" name="course" required>
+                            <label for="full-stack">Full Stack</label>
+                        </div>
+
+                        <div class="radio-divs">
+                            <input type="radio" id="game-development" name="course" required>
+                            <label for="game-development">Game Development</label>
+                        </div>
+
+                        <div class="radio-divs">
+                            <input type="radio" id="robotech" name="course" required>
+                            <label for="robotech">Robotech</label>
+                        </div>
+
+                        <div class="radio-divs">
+                            <input type="radio" id="algorithms" name="course" required>
+                            <label for="algorithms">Algorithms</label>
+                        </div>
+
+                        <button>Register</button>
+                    </form>
+                </div>
+                <div id="courses-div">
+                    <div id="nav-div">
+                        <p class="courses-p">Full Stack</p>
+                        <p class="courses-p">Game Development</p>
+                        <p class="courses-p">Robotech</p>
+                        <p class="courses-p">Algorithms</p>
+                    </div>
+                    <div id="course-div-text">
+                        <b id="course-div-text-b"></b>
+                        <p id="course-div-text-p"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/March_16_exam_GOA_website/bg_animation_&_header/animation.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
