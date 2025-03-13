@@ -52,7 +52,13 @@ nav{
 .nav-a:hover{
     text-decoration: underline;
 }
-#login-div{
+#login-register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+#login-div, #register-div{
     background-color: #68ba74;
     display: flex;
     justify-content: center;
@@ -64,7 +70,7 @@ nav{
     font-weight: 500;
     transition: background-color 0.2s;
 }
-#login-div:hover{
+#login-div:hover, #register-div:hover{
     background-color: #212522;
     color: #fff;
     cursor: pointer;

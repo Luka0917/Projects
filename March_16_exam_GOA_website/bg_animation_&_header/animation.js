@@ -26,19 +26,19 @@ function createSquare(){
 
 setInterval(createSquare, 100);
 
-window.addEventListener('load', () => {
-    if(localStorage.length > 0){
-        let loginDiv = document.getElementById('login-div');
-        loginDiv.id = 'nothing';
-        loginDiv.textContent = '';
+// window.addEventListener('load', () => {
+//     if(localStorage.length > 0){
+//         let loginDiv = document.getElementById('login-div');
+//         loginDiv.id = 'nothing';
+//         loginDiv.textContent = '';
 
-        const profile = document.createElement('div');
-        profile.innerHTML = '<i class="fa-solid fa-user"></i>';
-        profile.id = 'profile';
-        const name = document.createElement('p');
-        name.textContent = localStorage.getItem('user-name');
-        name.id = 'name';
-        document.getElementById('user').appendChild(profile);
-        document.getElementById('user').appendChild(name);
-    };
-});
+//         const profile = document.createElement('div');
+//         profile.innerHTML = '<i class="fa-solid fa-user"></i>';
+//         profile.id = 'profile';
+//         const name = document.createElement('p');
+//         name.textContent = localStorage.getItem('user-name');
+//         name.id = 'name';
+//         document.getElementById('user').appendChild(profile);
+//         document.getElementById('user').appendChild(name);
+//     };
+// });
