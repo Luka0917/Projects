@@ -12,7 +12,6 @@ main{
     justify-content: center;
     flex-direction: column;
     text-align: left;
-    gap: 30px;
     background-color: #181818;
     padding: 20px;
     border-radius: 24px;

@@ -62,3 +62,6 @@ button:hover{
     text-decoration: underline;
     cursor: pointer;
 }
+#err{
+    color: red;
+}

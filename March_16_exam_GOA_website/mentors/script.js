@@ -7,3 +7,10 @@ for(let i = 0; i < buttons.length; i++){
         slider.style.transform = `translateX(-${index * 100}%)`;
     });
 };
+
+document.getElementById('login-div').addEventListener('click', () => {
+    window.open('/March_16_exam_GOA_website/login/index.html', '_self');
+});
+document.getElementById('register-div').addEventListener('click', () => {
+    window.open('/March_16_exam_GOA_website/register/index.html', '_self');
+});

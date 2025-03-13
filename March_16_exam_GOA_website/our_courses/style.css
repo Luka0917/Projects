@@ -4,7 +4,6 @@ main{
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    /* padding: 50px; */
 }
 #main-main{
     background-color: #181818;
@@ -19,7 +18,6 @@ main{
     justify-content: center;
     align-items: center;
     gap: 150px;
-    /* border: 1px solid red; */
 }
 #register{
     display: flex;
@@ -31,7 +29,6 @@ main{
 #register-b{
     font-size: 30px;
     color: #68ba74;
-    /* border: 1px solid red; */
 }
 label{
     font-size: 18px;
@@ -93,7 +90,6 @@ form button{
     cursor: pointer;
 }
 #course-div-text{
-    /* border: 1px solid red; */
     width: 525px;
     height: 320px;
     background-color: #68ba74;

@@ -23,6 +23,16 @@ for(let i = 0; i < coursesP.length; i++){
 };
 document.querySelector('form').addEventListener('submit', e => {
     e.preventDefault();
-    alert('You Registered Successfully');
-    location.reload();
-})
+    if(localStorage.getItem('email')){
+        alert('You Registered Successfully');
+        location.reload();
+    }else{
+        alert('Please Register First');
+    };
+});
+document.getElementById('login-div').addEventListener('click', () => {
+    window.open('/March_16_exam_GOA_website/login/index.html', '_self');
+});
+document.getElementById('register-div').addEventListener('click', () => {
+    window.open('/March_16_exam_GOA_website/register/index.html', '_self');
+});
