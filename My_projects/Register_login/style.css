@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+    gap: 50px;
+    background: linear-gradient(to bottom left, #302180, #08051f);
+}
+button{
+    padding: 12px 24px;
+    font-size: 20px;
+    border-radius: 12px;
+    border: 2px solid #493D9E;
+    background-color: #302180;
+    color: #fff;
+    transition: box-shadow 0.3s;
+}
+button:hover{
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.15);
+}

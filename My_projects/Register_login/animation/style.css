@@ -1,0 +1,24 @@
+span{
+    position: absolute;
+    pointer-events: none;
+    background: #fff;
+    animation: animate 5s linear infinite;
+    z-index: -1;
+    border-radius: 7px;
+}
+@keyframes animate{
+    0%{
+        transform: scale(0) translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1) translateY(-500%) rotate(360deg);
+        opacity: 0;
+    }
+}

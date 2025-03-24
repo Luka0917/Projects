@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 20px;
+    overflow: hidden;
+    background: linear-gradient(to bottom left, #302180, #08051f);
+}
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 40px;
+    color: #fff;
+    gap: 30px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+}
+b{
+    font-size: 35px;
+}
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+label{
+    font-size: 18px;
+}
+#pass-lab{
+    margin-top: 17px;
+}
+input{
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+button{
+    padding: 6px 18px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: #302180;
+    border: 2px solid #493D9E;
+    color: #fff;
+    margin-top: 25px;
+    transition: background-color 0.3s;
+}
+button:hover{
+    background-color: #493D9E;
+    border: 2px solid #302180;
+    cursor: pointer;
+}
+#error{
+    color: red;
+    font-size: 20px;
+}

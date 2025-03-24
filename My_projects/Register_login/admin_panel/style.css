@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to bottom left, #302180, #08051f);
+}
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 120px;
+    color: #fff;
+    gap: 100px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+}
+#acc-and-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+#profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#acc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: #302180;
+    border-radius: 50%;
+    font-size: 40px;
+}
+#username-p{
+    font-size: 25px;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+li{
+    font-size: 23px;
+}
+li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+#operations{
+    width: 400px;
+    height: 500px;
+    border: 2px solid #fff;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+#operations b{
+    font-size: 35px;
+}
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#operations label{
+    font-size: 18px;   
+}
+#username-lab, #pass-lab{
+    margin-top: 17px;
+}
+#operations input{
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+#operations form button{
+    padding: 6px 18px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: #302180;
+    border: 2px solid #493D9E;
+    color: #fff;
+    margin-top: 25px;
+    transition: background-color 0.3s;
+}
+#operations form button:hover{
+    background-color: #493D9E;
+    border: 2px solid #302180;
+    cursor: pointer;
+}
+#error{
+    color: red;
+}
