@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px;
+    gap: 50px;
+    background-color: #F0F0D7;
+}
+input{
+    width: 350px;
+    border: none;
+    border-radius: 30px;
+    padding: 20px 30px;
+}
+#recipesContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+.recipe{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #DCD7C9;
+    padding: 30px;
+    border-radius: 24px;
+    width: 100%;
+}
