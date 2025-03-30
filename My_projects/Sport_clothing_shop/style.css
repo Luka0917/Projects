@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 20px 60px 20px;
+    height: 700px;
+    width: 100%;
+    background: linear-gradient(to top, gray, white);
+}
+#name-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+#name{
+    font-size: 35px;
+    font-weight: 600;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+nav a{
+    font-size: 20px;
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+}
+#icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+#search, #cart, #login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    gap: 10px;
+}
+#search:hover, #cart:hover, #login:hover{
+    cursor: pointer;
+}
+nav a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+#text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+#p-1{
+    font-size: 80px;
+}
+#p-2{
+    font-size: 20px;
+    text-align: center;
+    width: 835px;
+}
+#shop-now-btn{
+    border: none;
+    border-radius: 30px;
+    padding: 12px 50px;
+    background-color: #fff;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+#shop-now-btn:hover{
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
