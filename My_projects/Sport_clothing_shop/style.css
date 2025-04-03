@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Roboto;
 }
 body{
     display: flex;
@@ -17,7 +20,7 @@ header{
     padding: 10px 20px 60px 20px;
     height: 700px;
     width: 100%;
-    background: linear-gradient(to top, gray, white);
+    background: linear-gradient(to top, white, gray);
 }
 #name-nav{
     display: flex;
@@ -28,24 +31,27 @@ header{
 #name{
     font-size: 35px;
     font-weight: 600;
+    color: #F5F5F5;
 }
 nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
 }
 nav a{
     font-size: 20px;
     color: #000;
     font-size: 20px;
     text-decoration: none;
+    color: #F5F5F5;
 }
 #icons{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
+    color: #F5F5F5;
 }
 #search, #cart, #login{
     display: flex;
@@ -79,13 +85,155 @@ nav a:hover{
 #shop-now-btn{
     border: none;
     border-radius: 30px;
-    padding: 12px 50px;
-    background-color: #fff;
+    padding: 12px 30px;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
     font-size: 18px;
-    transition: background-color 0.3s;
+    transition: background-color  0.3s;
 }
 #shop-now-btn:hover{
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+#new-arrivals{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#main-p-1{
+    font-size: 50px;
+    margin-top: 70px;
+}
+#main-p-2{
+    font-size: 22px;
+    color: #959595;
+    margin: 10px 0 30px 0;
+}
+#products-main{
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: repeat(2, 450px);
+    gap: 10px 150px;
+}
+.products{
+    height: 460px;
+}
+.products img{
+    width: 100%;
+    height: 375px;
+    border-radius: 12px;
+}
+.heart{
+    position: relative;
+    top: 50px;
+    left: 250px;
+    font-size: 20px;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.2s;
+}
+.heart:hover{
+    cursor: pointer;
+    color: #fe0102;
+}
+.product-name-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.product-name{
+    font-size: 20px;
+}
+.product-price{
+    font-size: 23px;
+    font-weight: 600;
+}
+.product-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+.product-cart:hover{
     background-color: #000;
     color: #fff;
     cursor: pointer;
+}
+#product-btn{
+    border: none;
+    border-radius: 30px;
+    padding: 12px 60px;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+    font-size: 18px;
+    margin-top: 80px;
+    transition: background-color  0.3s;
+}
+#product-btn:hover{
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+#new-shop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    padding: 100px;
+    gap: 50px;
+}
+#new-shop img{
+    border-radius: 12px;
+}
+#new-shop-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    text-align: left;
+    height: 513px;
+}
+#new-shop-p-1{
+    font-size: 55px;
+    font-weight: 700;
+    width: 521px;
+}
+#new-shop-p-2{
+    font-size: 20px;
+    color: #878787;
+    width: 476px;
+}
+#new-shop-p-3{
+    font-size: 30px;
+    font-weight: 600;
+}
+#new-shop-p-4{
+    font-size: 70px;
+    font-weight: 700;
+}
+#new-shop-btn{
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+    font-size: 18px;
+    transition: background-color  0.3s;
 }
