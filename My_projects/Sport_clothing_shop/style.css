@@ -237,3 +237,8 @@ nav a:hover{
     font-size: 18px;
     transition: background-color  0.3s;
 }
+#new-shop-btn:hover{
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
