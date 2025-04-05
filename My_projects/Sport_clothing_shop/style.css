@@ -192,11 +192,9 @@ nav a:hover{
 
 #new-shop{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-top: 100px;
-    padding: 100px;
-    gap: 50px;
 }
 #new-shop img{
     border-radius: 12px;
@@ -212,12 +210,12 @@ nav a:hover{
 #new-shop-p-1{
     font-size: 55px;
     font-weight: 700;
-    width: 521px;
+    width: 720px;
 }
 #new-shop-p-2{
     font-size: 20px;
     color: #878787;
-    width: 476px;
+    width: 600px;
 }
 #new-shop-p-3{
     font-size: 30px;
@@ -228,7 +226,6 @@ nav a:hover{
     font-weight: 700;
 }
 #new-shop-btn{
-    border: none;
     border-radius: 30px;
     padding: 12px 30px;
     background-color: #000;
@@ -240,5 +237,103 @@ nav a:hover{
 #new-shop-btn:hover{
     background-color: #fff;
     color: #000;
+    cursor: pointer;
+}
+
+#options{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#options-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+#options-p-1{
+    font-size: 50px;
+    font-weight: 500;
+}
+#options-p-2{
+    font-size: 20px;
+    color: #8e8e8e;
+}
+#options-main-div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+    padding-top: 50px;
+}
+.options-divs{
+    width: 500px;
+    height: 270px;
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+.options-divs:hover{
+    cursor: pointer;
+}
+.options-divs p{
+    position: absolute;
+    z-index: 1;
+    font-size: 40px;
+    font-weight: 600;
+    transition: margin-bottom 0.4s;
+}
+.bg-color{
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    border-radius: 24px;
+    width: 500px;
+    transition: background 0.4s;
+}
+.bg-color-small{
+    height: 270px;
+}
+.bg-color-big{
+    height: 570px;
+}
+.options-divs img{
+    width: 100%;
+    height: 100%;
+}
+#option-div-2{
+    height: 570px;
+    grid-area: 1/2/3/3;
+}
+#option-div-4{
+    height: 570px;
+    grid-row: 2/4;
+}
+#option-div-5{
+    height: 570px;
+    grid-row: 2/4;
+}
+.discover{
+    position: absolute;
+    opacity: 0;
+    border: 2px solid #000;
+    z-index: 1;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    background-color: #fff;
+    color: #000;
+    font-size: 18px;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+.discover:hover{
+    background-color: #000;
+    color: #fff;
     cursor: pointer;
 }
