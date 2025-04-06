@@ -90,10 +90,10 @@ nav a:hover{
     color: #fff;
     border: 2px solid #000;
     font-size: 18px;
-    transition: background-color  0.3s;
+    transition: background  0.3s;
 }
 #shop-now-btn:hover{
-    background-color: #fff;
+    background: transparent;
     color: #000;
     cursor: pointer;
 }
@@ -105,7 +105,7 @@ nav a:hover{
 }
 #main-p-1{
     font-size: 50px;
-    margin-top: 70px;
+    margin-top: 100px;
 }
 #main-p-2{
     font-size: 22px;
@@ -336,4 +336,139 @@ nav a:hover{
     background-color: #000;
     color: #fff;
     cursor: pointer;
+}
+footer{
+    width: 100%;
+    height: 700px;
+    margin-top: 100px;
+    background: linear-gradient(to top, white, gray);
+}
+#footer-email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px;
+}
+#footer-email-p-1{
+    font-size: 40px;
+    font-weight: 500;
+    color: #fff;
+}
+#footer-email-p-2{
+    font-size: 20px;
+    color: #fff;
+    margin-top: 10px;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+form input{
+    padding: 10px 30px;
+    width: 350px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+form input:focus{
+    outline: none;
+}
+form input::placeholder{
+    color: #fff;
+}
+form button{
+    padding: 13px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+form button:hover{
+    background-color: #000;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+#footer-text-1{
+    width: 100%;
+    height: 550px;
+    background-color: #000;
+    color: #fff;
+    padding: 30px 40px;
+}
+#footer-text-2{
+    height: 287px;
+}
+#links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#links a{
+    font-size: 30px;
+    color: #fff;
+    transition: color 0.3s;
+}
+#links a:hover{
+    color: #a7a6a7;
+}
+#footer-text-p-1{
+    font-size: 50px;
+    font-weight: 600;
+}
+#footer-text-p-2{
+    font-size: 20px;
+    width: 343px;
+    margin-top: 15px;
+}
+#link-div-main{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.link-top-p{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.link-p{
+    font-size: 20px;
+    color: #797979;
+    line-height: 40px;
+}
+.link-p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+#icons-bottom-text{
+    height: 287px;
+}
+#footer-icons{
+    position: relative;
+    bottom: 124px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+#text-bottom-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 306px;
+    position: relative;
+    top: 100px;
+    left: 1450px;
+}
+#bottom-p{
+    text-align: center;
+    position: relative;
+    top: 160px;
 }
