@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #626F47;
+    color: #F5ECD5;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+#meal-type-lab, #difficulty-lab, #rating-lab, #calories-lab, #submit{
+    margin: 0 5px 0 30px;
+}
+label{
+    font-size: 20px;
+}
+input, select, #submit, .product-recepie-btn{
+    border: none;
+    border-radius: 7px;
+    padding: 7px 14px;
+    background-color: #F5ECD5;
+}
+.product-recepie-btn, #submit{
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.product-recepie-btn:hover, #submit:hover{
+    background-color: #F0BB78;
+}
+form input:focus, form select:focus{
+    outline: none;
+}
+img{
+    width: 200px;
+    border-radius: 12px;
+}
+#main{
+    display: grid;
+    grid-template-columns: repeat(3, 500px);
+    grid-template-rows: repeat(10, 300px);
+    gap: 50px;
+    margin: 50px 0 50px 0;
+}
+.product-divs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    border-radius: 24px;
+    background-color: #A4B465;
+}
+.img-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.product-name{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 5px;
+    width: 200px;
+    text-align: center;
+}
+.product-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 10px;
+}
+.product-cuisine, .product-difficulty, .product-meal-type, .product-rating, .product-calories{
+    font-size: 20px;
+}
