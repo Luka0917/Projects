@@ -83,3 +83,6 @@ img{
 .product-cuisine, .product-difficulty, .product-meal-type, .product-rating, .product-calories{
     font-size: 20px;
 }
+.product-meal-type{
+    width: 200px;
+}

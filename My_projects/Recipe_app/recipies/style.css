@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #626F47;
+    color: #F5ECD5;
+}
+.main{
+    background-color: #A4B465;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 100px;
+    border-radius: 24px;
+}
+img{
+    width: 500px;
+    border-radius: 12px;
+}
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.name{
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+.cuisine, .difficulty, .meal-type, .calories, .cook-time, li{
+    font-size: 20px;
+    font-weight: 500;
+    width: 300px;
+}
+.cook-time{
+    margin-bottom: 50px;
+}
+.ingredients-instructions{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 50px;
+}
+.ingredients{
+    margin-left: 100px;
+}
+.ingredients-p, .instructions-p{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+ul{
+    list-style: none;
+}
