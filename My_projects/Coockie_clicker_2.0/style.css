@@ -39,7 +39,8 @@ body{
     cursor: pointer;
 }
 #shop{
-    height: 912px;
+    /* height: 912px; */
+    height: 100%;
     width: 505px;
     background-color: #254D70;
     position: absolute;
