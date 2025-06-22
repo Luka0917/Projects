@@ -26,6 +26,9 @@ const steveBtn = document.getElementById('steve-btn');
 const stevePriceP = document.getElementById('steve-price');
 const steveCountP = document.getElementById('steve-count');
 
+const buyBtn = document.getElementById('buy');
+const sellBtn = document.getElementById('sell');
+
 const restartBtn = document.getElementById('restart-btn');
 
 restartBtn.addEventListener('click', () => {
@@ -38,13 +41,13 @@ cartBtn.addEventListener('click', () => {
     let interval = setInterval(() => {
         count += 5;
         shopDiv.style.transform = `translateX(${count}px)`
-        if(count >= 500){
+        if(count >= 525){
             clearInterval(interval);
         };
     }, 1);
 });
 xBtn.addEventListener('click', () => {
-    let count = 500;
+    let count = 525;
     let interval = setInterval(() => {
         count -= 5;
         shopDiv.style.transform = `translateX(${count}px)`
@@ -75,6 +78,9 @@ let bakerCount = 0;
 let stevePrice = 500;
 let steveCount = 0;
 
+let buy = true;
+let sell = false;
+
 biggerFingerBtn.disabled = true;
 betterMinesBtn.disabled = true;
 doubleCoockiesBtn.disabled = true;
@@ -82,11 +88,20 @@ bakerBtn.disabled = true;
 steveBtn.disabled = true;
 
 function checkPrices(){
-    if(goldCount >= biggerFingerPrice){biggerFingerBtn.disabled = false; biggerFingerBtn.style.border = '5px solid #9BEC00'}else{biggerFingerBtn.disabled = true; biggerFingerBtn.style.border = '5px solid #FF0000'};
-    if(coockieCount >= betterMinesPrice){betterMinesBtn.disabled = false; betterMinesBtn.style.border = '5px solid #9BEC00'}else{betterMinesBtn.disabled = true; betterMinesBtn.style.border = '5px solid #FF0000'};
-    if(goldCount >= doubleCoockiesPrice){doubleCoockiesBtn.disabled = false; doubleCoockiesBtn.style.border = '5px solid #9BEC00'}else{doubleCoockiesBtn.disabled = true; doubleCoockiesBtn.style.border = '5px solid #FF0000'};
-    if(goldCount >= bakerPrice){bakerBtn.disabled = false; bakerBtn.style.border = '5px solid #9BEC00'}else{bakerBtn.disabled = true; bakerBtn.style.border = '5px solid #FF0000'};
-    if(coockieCount >= stevePrice){steveBtn.disabled = false; steveBtn.style.border = '5px solid #9BEC00'}else{steveBtn.disabled = true; steveBtn.style.border = '5px solid #FF0000'};
+    if(buy){
+        if(goldCount >= biggerFingerPrice){biggerFingerBtn.disabled = false; biggerFingerBtn.style.border = '5px solid #9BEC00'}else{biggerFingerBtn.disabled = true; biggerFingerBtn.style.border = '5px solid #FF0000'};
+        if(coockieCount >= betterMinesPrice){betterMinesBtn.disabled = false; betterMinesBtn.style.border = '5px solid #9BEC00'}else{betterMinesBtn.disabled = true; betterMinesBtn.style.border = '5px solid #FF0000'};
+        if(goldCount >= doubleCoockiesPrice){doubleCoockiesBtn.disabled = false; doubleCoockiesBtn.style.border = '5px solid #9BEC00'}else{doubleCoockiesBtn.disabled = true; doubleCoockiesBtn.style.border = '5px solid #FF0000'};
+        if(goldCount >= bakerPrice){bakerBtn.disabled = false; bakerBtn.style.border = '5px solid #9BEC00'}else{bakerBtn.disabled = true; bakerBtn.style.border = '5px solid #FF0000'};
+        if(coockieCount >= stevePrice){steveBtn.disabled = false; steveBtn.style.border = '5px solid #9BEC00'}else{steveBtn.disabled = true; steveBtn.style.border = '5px solid #FF0000'};
+    };
+    if(sell){
+        if(biggerFingerCount > 0){biggerFingerBtn.disabled = false; biggerFingerBtn.style.border = '5px solid #9BEC00'}else{biggerFingerBtn.style.border = '5px solid #FF0000'; biggerFingerBtn.disabled = true};
+        if(betterMinesCount > 0){betterMinesBtn.disabled = false; betterMinesBtn.style.border = '5px solid #9BCE00'}else{betterMinesBtn.disabled = true;betterMinesBtn.style.border = '5px solid #FF0000'};
+        if(doubleCoockiesCount > 0){doubleCoockiesBtn.disabled = false; doubleCoockiesBtn.style.border = '5px solid #9BEC00'}else{doubleCoockiesBtn.disabled = true; doubleCoockiesBtn.style.border = '5px solid #FF0000'};
+        if(bakerCount > 0){bakerBtn.disabled = false; bakerBtn.style.border = '5px solid #9BEC00'}else{bakerBtn.disabled = true; bakerBtn.style.border = '5px solid #FF0000'};
+        if(steveCount > 0){steveBtn.disabled = false; steveBtn.style.border = '5px solid #9BCE00'}else{steveBtn.disabled = true; steveBtn.style.border = '5px solid #FF0000'};
+    };
 };
 
 window.addEventListener('load', () => {
@@ -166,71 +181,120 @@ coockieBtn.addEventListener('click', () => {
 });
 
 biggerFingerBtn.addEventListener('click', () => {
-    if(goldCount >= biggerFingerPrice){
+    if(buy && goldCount >= biggerFingerPrice){
         goldCount -= biggerFingerPrice;
         coockiesToAdd += 1;
         biggerFingerCount += 1;
-        biggerFingerPrice = Math.floor(biggerFingerPrice + biggerFingerPrice * 0.2);
-        biggerFingerPriceP.textContent = `${biggerFingerPrice.toLocaleString('de-DE')}$`;
-        biggerFingerCountP.textContent = biggerFingerCount;
-        loadEverything();
-        checkPrices();
-        saveDataToLocalStorage();
+        biggerFingerPrice = Math.floor(biggerFingerPrice * 1.3);
     };
+    if(sell && biggerFingerCount > 0){
+        goldCount += Math.floor(biggerFingerPrice / 1.3 * 0.7);
+        coockiesToAdd -= 1;
+        biggerFingerCount -= 1;
+        biggerFingerPrice = Math.round(biggerFingerPrice / 1.3);
+    };
+    biggerFingerPriceP.textContent = `${biggerFingerPrice.toLocaleString('de-DE')}$`;
+    biggerFingerCountP.textContent = biggerFingerCount;
+    loadEverything();
+    checkPrices();
+    saveDataToLocalStorage();
 });
 
 betterMinesBtn.addEventListener('click', () => {
-    if(coockieCount >= betterMinesPrice){
+    if(buy && coockieCount >= betterMinesPrice){
         coockieCount -= betterMinesPrice;
         goldToAdd += 1;
         betterMinesCount += 1;
-        betterMinesPrice = Math.floor(betterMinesPrice + betterMinesPrice * 0.3);
-        betterMinesPriceP.textContent = `${betterMinesPrice.toLocaleString('de-DE')} Coockies`;
-        betterMinesCountP.textContent = betterMinesCount;
-        loadEverything();
-        checkPrices();
-        saveDataToLocalStorage();
+        betterMinesPrice = Math.floor(betterMinesPrice * 1.3);
     };
+    if(sell && betterMinesCount > 0){
+        coockieCount += Math.floor(betterMinesPrice / 1.3 * 0.7);
+        goldToAdd -= 1;
+        betterMinesCount -= 1;
+        betterMinesPrice = Math.round(betterMinesPrice / 1.3);
+    };
+    betterMinesPriceP.textContent = `${betterMinesPrice.toLocaleString('de-DE')} Coockies`;
+    betterMinesCountP.textContent = betterMinesCount;
+    loadEverything();
+    checkPrices();
+    saveDataToLocalStorage();
 });
 
 doubleCoockiesBtn.addEventListener('click', () => {
-    if(goldCount >= doubleCoockiesPrice){
+    if(buy && goldCount >= doubleCoockiesPrice){
         goldCount -= doubleCoockiesPrice;
         coockiesToAdd *= 2;
         doubleCoockiesCount += 1;
-        doubleCoockiesPrice = Math.floor(doubleCoockiesPrice + doubleCoockiesPrice * 0.5);
-        doubleCoockiesPriceP.textContent = `${doubleCoockiesPrice.toLocaleString('de-DE')}$`;
-        doubleCoockiesCountP.textContent = doubleCoockiesCount;
-        loadEverything();
-        checkPrices();
-        saveDataToLocalStorage();
+        doubleCoockiesPrice = Math.floor(doubleCoockiesPrice * 1.5);
     };
+    if(sell && doubleCoockiesCount > 0){
+        goldCount += Math.floor(doubleCoockiesPrice / 1.5 * 0.7);
+        coockiesToAdd /= 2;
+        doubleCoockiesCount -= 1;
+        doubleCoockiesPrice = Math.round(doubleCoockiesPrice / 1.5);
+    };
+    doubleCoockiesPriceP.textContent = `${doubleCoockiesPrice.toLocaleString('de-DE')}$`;
+    doubleCoockiesCountP.textContent = doubleCoockiesCount;
+    loadEverything();
+    checkPrices();
+    saveDataToLocalStorage();
 });
 
 bakerBtn.addEventListener('click', () => {
-    if(goldCount >= bakerPrice){
+    if(buy && goldCount >= bakerPrice){
         goldCount -= bakerPrice;
         coockiesToAdd += 10;
         bakerCount += 1;
-        bakerPrice = Math.floor(bakerPrice + bakerPrice * 0.3);
-        bakerPriceP.textContent = `${bakerPrice.toLocaleString('de-DE')}$`;
-        bakerCountP.textContent = bakerCount;
-        loadEverything();
-        checkPrices();
-        saveDataToLocalStorage();
+        bakerPrice = Math.floor(bakerPrice * 1.3);
     };
+    if(sell && bakerCount > 0){
+        goldCount += Math.floor(bakerPrice / 1.3 * 0.7);
+        coockiesToAdd -= 10;
+        bakerCount -= 1;
+        bakerPrice = Math.round(bakerPrice / 1.3);
+    };
+    bakerPriceP.textContent = `${bakerPrice.toLocaleString('de-DE')}$`;
+    bakerCountP.textContent = bakerCount;
+    loadEverything();
+    checkPrices();
+    saveDataToLocalStorage();
 });
 
 steveBtn.addEventListener('click', () => {
-    if(coockieCount >= stevePrice){
+    if(buy && coockieCount >= stevePrice){
         coockieCount -= stevePrice;
         goldToAdd += 10;
         steveCount += 1;
-        stevePrice = Math.floor(stevePrice + stevePrice * 0.3);
-        steveCountP.textContent = `${stevePrice.toLocaleString('de-De')} Coockies`;
-        steveCountP.textContent = steveCount;
-        loadEverything();
-        checkPrices();
-        saveDataToLocalStorage();
+        stevePrice = Math.floor(stevePrice * 1.3);
     };
+    if(sell && steveCount > 0){
+        coockieCount += Math.floor(stevePrice / 1.3 * 0.7);
+        goldToAdd -= 10;
+        steveCount -= 1;
+        stevePrice = Math.round(stevePrice / 1.3);
+    };
+    steveCountP.textContent = `${stevePrice.toLocaleString('de-De')} Coockies`;
+    steveCountP.textContent = steveCount;
+    loadEverything();
+    checkPrices();
+    saveDataToLocalStorage();
+});
+
+buyBtn.addEventListener('click', () => {
+    buyBtn.style.backgroundColor = '#2888c4';
+    sellBtn.style.backgroundColor = '#37658d';
+    buy = true;
+    sell = false;
+    checkPrices();
+});
+
+sellBtn.addEventListener('click', () => {
+    sellBtn.style.backgroundColor = '#2888c4';
+    buyBtn.style.backgroundColor = '#37658d';
+    buy = false;
+    sell = true;
+    checkPrices();
+    if(biggerFingerCount > 0){
+        biggerFingerPriceP.textContent = `+${Math.round(biggerFingerPrice / 1.3 * 0.7).toLocaleString('de-DE')}$`;
+    }
 });
