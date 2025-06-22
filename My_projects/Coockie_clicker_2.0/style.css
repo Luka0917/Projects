@@ -13,6 +13,27 @@ body{
     height: 100vh;
     background-image: url('background.png');
 }
+#coockie-btn-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#restart-btn{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    border-radius: 7px;
+    padding: 5px 10px;
+    background-color: #578FCA;
+    color: #f5f5f5;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+#restart-btn:hover{
+    background-color: #3674B5;
+}
 #coockie-btn{
     border-radius: 50%;
     border: none;
@@ -39,7 +60,6 @@ body{
     cursor: pointer;
 }
 #shop{
-    /* height: 912px; */
     height: 100%;
     width: 505px;
     background-color: #254D70;
