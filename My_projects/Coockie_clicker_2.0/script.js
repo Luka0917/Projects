@@ -52,6 +52,7 @@ const buyBtn = document.getElementById('buy');
 const sellBtn = document.getElementById('sell');
 
 const form = document.querySelector('form');
+const errorP = document.getElementById('error-p');
 
 const restartBtn = document.getElementById('restart-btn');
 
@@ -102,7 +103,7 @@ let bakerCount = 0;
 let stevePrice = 500;
 let steveCount = 0;
 
-let factoryPrice = 15000;
+let factoryPrice = 100000;
 let factoryCount = 0;
 
 let grandmaPrice = 3000;
@@ -331,13 +332,13 @@ doubleCoockiesBtn.addEventListener('click', () => {
         goldCount -= doubleCoockiesPrice;
         coockiesToAdd *= 2;
         doubleCoockiesCount += 1;
-        doubleCoockiesPrice = Math.floor(doubleCoockiesPrice * 1.5);
+        doubleCoockiesPrice = Math.floor(doubleCoockiesPrice * 2);
     };
     if(sell && doubleCoockiesCount > 0){
         goldCount += Math.floor(doubleCoockiesPrice / 1.5 * 0.7);
         coockiesToAdd /= 2;
         doubleCoockiesCount -= 1;
-        doubleCoockiesPrice = Math.round(doubleCoockiesPrice / 1.5);
+        doubleCoockiesPrice = Math.round(doubleCoockiesPrice / 2);
     };
     doubleCoockiesPriceP.textContent = `${doubleCoockiesPrice.toLocaleString('de-DE')}$`;
     doubleCoockiesCountP.textContent = doubleCoockiesCount;
@@ -504,17 +505,22 @@ form.addEventListener('submit', e => {
     e.preventDefault();
     const inputField = form.coockiesIntoGold;
     const input = parseInt(inputField.value);
-    const lastChar = input.toString().slice(-1);
-    let leftover = 0;
-    if(lastChar === '0' || lastChar === '5'){
-        coockieCount -= input;
-        goldCount += input / 5;
+    if(input <= coockieCount){
+        const lastChar = input.toString().slice(-1);
+        let leftover = 0;
+        if(lastChar === '0' || lastChar === '5'){
+            coockieCount -= input;
+            goldCount += input / 10;
+        }else{
+            leftover = input % 10;
+            coockieCount -= input - leftover;
+            goldCount += (input - leftover) / 10;
+        };
+        inputField.value = leftover > 0 ? leftover : '';
+        errorP.textContent = '';
     }else{
-        leftover = input % 5;
-        coockieCount -= input - leftover;
-        goldCount += (input - leftover) / 5;
-    };
-    inputField.value = leftover > 0 ? leftover : '';
+        errorP.textContent = 'Please enter correct amount of Coockies';
+    }
     loadEverything();
     saveDataToLocalStorage();
 });

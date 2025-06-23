@@ -109,6 +109,12 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
 #submit-btn:hover{
     background-color: #3674B5;
 }
+#error-p{
+    font-size: 20px;
+    font-weight: 500;
+    color: #ff0000;
+    margin-top: 10px;
+}
 #shop{
     height: 100%;
     width: 525px;
