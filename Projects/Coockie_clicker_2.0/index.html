@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coockie Clicker🍪</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" href="coockie.png">
+</head>
+<body>
+    <div id="coockie-btn-text">
+        <button id="coockie-btn">
+            <img src="coockie.png" alt="coockie" id="coockie">
+        </button>
+        <div id="coockies-gold">
+            <p id="per-second-p-1">🍪Per Second: 0</p>
+            <p id="per-second-p-2">🪙Per Second: 0</p>
+            <p id="coockies-p">Coockies: 0 +1</p>
+            <p id="gold-p">Gold: 0 +1</p>
+        </div>
+        <button id="restart-btn">Restart</button>
+    </div>
+    <button id="cart"><i class="fa-solid fa-cart-shopping"></i></button>
+    <div id="coockies-into-gold-div">
+        <p id="coockies-into-gold-p-1">Turn 🍪Coockies Into 💰Gold</p>
+        <p id="coockies-into-gold-p-2">5🍪 <i class="fa-solid fa-arrow-right"></i> 1💰</p>
+        <form>
+            <input type="number" min="5" placeholder="Enter Coockies" name="coockiesIntoGold">
+            <button id="submit-btn">Submit</button>
+        </form>
+    </div>
+    <div id="shop">
+        <div id="shop-p-x-btn">
+            <div id="buy-sell-div">
+                <button class="buy-sell-btn" id="buy">Buy</button>
+                <button class="buy-sell-btn" id="sell">Sell</button>
+            </div>
+            <p id="shop-p">Shop 🛒</p>
+            <button id="x"><i class="fa-solid fa-x"></i></button>
+        </div>
+        <div id="helper-btns">
+            <button class="helper-btn" id="bigger-finger-btn">
+                <div class="helper-div">
+                    <p class="emoji">☝️</p>
+                    <div class="helper-text">
+                        <div class="name-effect-div">
+                            <b class="product-name">Bigger Finger</b>
+                            <p class="effect-p">+1🍪</p>
+                        </div>
+                        <p class="product-price" id="bigger-finger-price">50$</p>
+                    </div>
+                </div>
+                <p class="product-count" id="bigger-finger-count">0</p>
+            </button>
+            <button class="helper-btn" id="better-mines-btn">
+                <div class="helper-div">
+                    <p class="emoji">⛏️</p>
+                    <div class="helper-text">
+                        <div class="name-effect-div">
+                            <b class="product-name">Better Mines</b>
+                            <p class="effect-p">+1🪙</p>
+                        </div>
+                        <p class="product-price" id="better-mines-price">100 Coockies</p>
+                    </div>
+                </div>
+                <p class="product-count" id="better-mines-count">0</p>
+            </button>
+            <button class="helper-btn" id="double-coockies-btn">
+                <div class="helper-div">
+                    <p class="emoji">🍪</p>
+                    <div class="helper-text">
+                        <div class="name-effect-div">
+                            <b class="product-name">Double Coockies</b>
+                            <p class="effect-p">x2🍪</p>
+                        </div>
+                        <p class="product-price" id="double-coockies-price">100.000$</p>
+                    </div>
+                </div>
+                <p class="product-count" id="double-coockies-count">0</p>
+            </button>
+            <button class="helper-btn" id="baker-btn">
+                <div class="helper-div">
+                    <p class="emoji">👨‍🍳</p>
+                    <div class="helper-text">
+                        <div class="name-effect-div">
+                            <b class="product-name">Baker</b>
+                            <p class="effect-p">+10🍪</p>
+                        </div>
+                        <p class="product-price" id="baker-price">500$</p>
+                    </div>
+                </div>
+                <p class="product-count" id="baker-count">0</p>
+            </button>
+            <button class="helper-btn" id="steve-btn">
+                <div class="helper-div">
+                    <p class="emoji">🧔‍♂️</p>
+                    <div class="helper-text">
+                        <div class="name-effect-div">
+                            <b class="product-name">Steve</b>
+                            <p class="effect-p">+10🪙</p>
+                        </div>
+                        <p class="product-price" id="steve-price">500 Coockies</p>
+                    </div>
+                </div>
+                <p class="product-count" id="steve-count">0</p>
+            </button>
+            <button class="helper-btn" id="factory-btn">
+                <div class="helper-div">
+                    <p class="emoji">🏭</p>
+                    <div class="helper-text">
+                        <div class="name-effect-div">
+                            <b class="product-name">Factory</b>
+                            <p class="effect-p">+100🍪ps</p>
+                        </div>
+                        <p class="product-price" id="factory-price">15.000 Coockies</p>
+                    </div>
+                </div>
+                <p class="product-count" id="factory-count">0</p>
+            </button>
+            <button class="helper-btn" id="grandma-btn">
+                <div class="helper-div">
+                    <p class="emoji">👵</p>
+                    <div class="helper-text">
+                        <div class="name-effect-div">
+                            <b class="product-name">Grandma</b>
+                            <p class="effect-p">+2🍪 & +1🪙</p>
+                        </div>
+                        <p class="product-price" id="grandma-price">3.000$</p>
+                    </div>
+                </div>
+                <p class="product-count" id="grandma-count">0</p>
+            </button>
+            <button class="helper-btn" id="golden-gloves-btn">
+                <div class="helper-div">
+                    <p class="emoji">🧤</p>
+                    <div class="helper-text">
+                        <div class="name-effect-div">
+                            <b class="product-name">Golden Gloves</b>
+                            <p class="effect-p">+5🍪 & +5🪙</p>
+                        </div>
+                        <p class="product-price" id="golden-gloves-price">10.000$</p>
+                    </div>
+                </div>
+                <p class="product-count" id="golden-gloves-count">0</p>
+            </button>
+            <button class="helper-btn" id="coockie-generator-btn">
+                <div class="helper-div">
+                    <p class="emoji">⚙️</p>
+                    <div class="helper-text">
+                        <div class="name-effect-div">
+                            <b class="product-name">Coockies Generator</b>
+                            <p class="effect-p">+1🍪ps</p>
+                        </div>
+                        <p class="product-price" id="coockie-generator-price">1.000$</p>
+                    </div>
+                </div>
+                <p class="product-count" id="coockie-generator-count">0</p>
+            </button>
+            <button class="helper-btn" id="gold-generator-btn">
+                <div class="helper-div">
+                    <p class="emoji">🏦</p>
+                    <div class="helper-text">
+                        <div class="name-effect-div">
+                            <b class="product-name">Gold Generator</b>
+                            <p class="effect-p">+1🪙ps</p>
+                        </div>
+                        <p class="product-price" id="gold-generator-price">2.000$</p>
+                    </div>
+                </div>
+                <p class="product-count" id="gold-generator-count">0</p>
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
