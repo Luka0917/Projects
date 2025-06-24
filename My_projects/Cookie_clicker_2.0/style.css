@@ -13,7 +13,7 @@ body{
     height: 100vh;
     background-image: url('background.png');
 }
-#coockie-btn-text{
+#cookie-btn-text{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,16 +34,16 @@ body{
 #restart-btn:hover{
     background-color: #3674B5;
 }
-#coockie-btn{
+#cookie-btn{
     border-radius: 50%;
     border: none;
     background: transparent;
     cursor: pointer;
 }
-#coockie-btn:active{
+#cookie-btn:active{
     transform: scale(1.1);
 }
-#coockie{
+#cookie{
     width: 200px;
 }
 #cart{
@@ -59,7 +59,7 @@ body{
     color: #f5f5f5;
     cursor: pointer;
 }
-#coockies-into-gold-div{
+#cookies-into-gold-div{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,12 +68,12 @@ body{
     top: 200px;
     left: 50px;
 }
-#coockies-into-gold-p-1{
+#cookies-into-gold-p-1{
     font-size: 30px;
     font-weight: 600;
     color: #f5f5f5;
 }
-#coockies-into-gold-p-2{
+#cookies-into-gold-p-2{
     font-size: 25px;
     font-weight: 500;
     color: #f5f5f5;
@@ -228,7 +228,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
 .product-count{
     font-size: 30px;
 }
-#coockies-gold{
+#cookies-gold{
     display: flex;
     justify-content: center;
     align-items: center;
