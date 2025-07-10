@@ -56,11 +56,6 @@ const errorP = document.getElementById('error-p');
 
 const restartBtn = document.getElementById('restart-btn');
 
-const widthP = document.getElementById('width-p');
-const heightP = document.getElementById('height-p');
-widthP.textContent = `Width: ${window.innerWidth}`;
-heightP.textContent = `Height: ${window.innerHeight}`;
-
 restartBtn.addEventListener('click', () => {
     localStorage.clear();
     location.reload();
@@ -71,7 +66,11 @@ cartBtn.addEventListener('click', () => {
     let interval = setInterval(() => {
         count += 5;
         shopDiv.style.transform = `translateX(${count}px)`;
-        if((window.innerWidth === 1866 || count >= 525) || ((window.innerWidth >= 320 && window.innerWidth <= 375) && count >= 300) || ((window.innerWidth >= 400 && window.innerWidth <= 500) && count >= 350)){
+        if(
+            ((window.innerWidth >= 1000 && window.innerWidth <= 1866) && count === 525) || 
+            ((window.innerWidth >= 320 && window.innerWidth <= 375) && count === 300) || 
+            ((window.innerWidth >= 400 && window.innerWidth <= 500) && count == 350)
+        ){
             clearInterval(interval);
         };
     }, 1);
